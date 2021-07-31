@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300&display=swap');
+
+:root{
+    --background: white;
+    --background-dark: wheat;
+    --primary-color: blue;
+    --primary-dark: darkblue;
+    --primary-light:skyblue;
+    --text-light:white;
+    --tex-dark:black;
+}
+
+body{
+
+}
+.heading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+}
+.container{
+    border: 2px solid black;
+    height: 70vh;
+    padding: 10px;
+    margin: 30px;
+    text-align: center;
+}
+.container-grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+}
+.main{
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 60px);
+    padding-top: 2rem;
+}
+.main-img{
+    
+}
+.inline-text{
+    display: inline;
+}
+.title{
+    margin: auto 20px;
+    justify-self: right;
+    align-self: center;
+
+}
+.input-area{
+    margin: 5px;
+    height: 30px;
+    width: 100px;
+    align-self: center;
+}
+button{
+    display: block;
+    margin: auto;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    grid-column: 1/span 2;
+}
