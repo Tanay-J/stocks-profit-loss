@@ -16,7 +16,7 @@ function displayResult(){
     if(input[0].value != '' && input[1].value != '' && input[2].value != ''){
         calculateResult();
         if(resultAmount > 0){
-            outputArea.innerHTML = `Your<span class="highlighted-text"> Profit </span>is <span class="highlighted-text">Rs.${resultAmount} or ${resultPercentage}%</span>`;
+            outputArea.innerHTML = `Your<span class="highlighted-text"> Profit </span>is <span class="highlighted-text">Rs.${resultAmount}</span> or <span class="highlighted-text">${resultPercentage}%</span>`;
         }else if(resultAmount < 0){
             outputArea.innerHTML = `Your<span class="highlighted-text"> Loss </span>is ${result}`;
         }else if(resultAmount == 0){
