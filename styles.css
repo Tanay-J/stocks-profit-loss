@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300&display=swap');
 
 :root{
-    --background: white;
+    --background: #003638;
     --background-dark: wheat;
-    --primary-color: blue;
-    --primary-dark: darkblue;
-    --primary-light:skyblue;
+    --primary-color: #FFD523;
+    --primary-dark: #CCAA1C;
+    --primary-light:#FFEC9C;
     --text-light:white;
-    --tex-dark:black;
+    --text-dark:#2C2E43;
 }
 
 body{
-
+    background-color: var(--background);
 }
 .heading{
     text-align: center;
@@ -22,7 +22,8 @@ body{
     background-color: var(--primary-color);
 }
 .container{
-    border: 2px solid black;
+    border: 5px solid var(--primary-color);
+    border-radius: 10px;
     height: 70vh;
     padding: 10px;
     margin: 30px;
@@ -34,8 +35,9 @@ body{
     grid-template-rows: 100%;
 }
 .main{
+    color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 60px);
@@ -58,12 +60,16 @@ body{
     height: 30px;
     width: 100px;
     align-self: center;
+    background-color: var(--primary-light);
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
 }
 button{
     display: block;
     margin: auto;
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: var(--text-dark);
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
@@ -77,5 +83,7 @@ button{
     margin-top: 20px;
 }
 .highlighted-text{
+    font-size: 1.3rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
