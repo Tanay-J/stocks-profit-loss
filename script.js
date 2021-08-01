@@ -2,6 +2,7 @@
 const input = Array.from(document.getElementsByClassName('input-area'));
 const outputArea = document.querySelector('.output-area');
 const btn = document.querySelector('#btn');
+const pnlImage = document.querySelector('.pnl-image');
 let resultAmount = 0;
 let resultPercentage = 0;
 
@@ -16,10 +17,15 @@ function displayResult(){
     if(input[0].value != '' && input[1].value != '' && input[2].value != ''){
         calculateResult();
         if(resultAmount > 0){
-            outputArea.innerHTML = `Your<span class="highlighted-text"> Profit </span>is <span class="highlighted-text">Rs.${resultAmount}</span> or <span class="highlighted-text">${resultPercentage}%</span>`;
+            pnlImage.setAttribute('style','display:block');
+            pnlImage.setAttribute('src','/img/profit.svg');
+            outputArea.innerHTML = `Your<span class="highlighted-text"> Profit </span>is <span class="highlighted-text">Rs. ${resultAmount}</span> or <span class="highlighted-text">${resultPercentage}%</span>`;
         }else if(resultAmount < 0){
-            outputArea.innerHTML = `Your<span class="highlighted-text"> Loss </span>is ${result}`;
+            pnlImage.setAttribute('style','display:block');
+            pnlImage.setAttribute('src','/img/loss.svg');
+            outputArea.innerHTML = `Your<span class="highlighted-text"> Loss </span>is <span class="highlighted-text">Rs. ${resultAmount}</span> or <span class="highlighted-text">${resultPercentage}%</span>`;
         }else if(resultAmount == 0){
+            pnlImage.setAttribute('style','display:none');
             outputArea.innerHTML = `<span class="highlighted-text"> No Profit No Loss </span>`;
         } 
     }else {
