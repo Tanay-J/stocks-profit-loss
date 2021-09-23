@@ -14,7 +14,9 @@ function calculateResult(){
     resultPercentage = (resultAmount/totalBuy * 100).toFixed(2);
 }
 function displayResult(){
-    if(input[0].value != '' && input[1].value != '' && input[2].value != ''){
+    if(parseInt(input[0].value) < 0 || parseInt(input[1].value) < 0 || parseInt(input[2].value) < 0){
+        outputArea.textContent = 'Negative values are not allowed';
+    }else if(input[0].value != '' && input[1].value != '' && input[2].value != ''){
         calculateResult();
         if(resultAmount > 0){
             pnlImage.setAttribute('style','display:block');
